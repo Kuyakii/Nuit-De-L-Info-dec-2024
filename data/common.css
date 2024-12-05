@@ -9,14 +9,24 @@
     border:solid 2px black;
 }
 
+.nav img{
+    width: 300px;
+    padding:0;
+}
 
 .nav{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+
 }
 
 .nav a{
     text-decoration: none;
     font-size: 2em;
+    margin-right: 50px;
+}
+
+#waterCanvas{
+    width: 100%;
 }
