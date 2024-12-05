@@ -1,3 +1,10 @@
+
+
+.content{
+    background: rgb(116,116,164);
+    background: linear-gradient(0deg, rgba(116,116,164,1) 0%, rgba(24,188,222,1) 97%);
+}
+
 .container{
     padding-top:55px;
     margin:0 5em 0 5em;
@@ -12,6 +19,7 @@
 .section-caracteristique p{
     align-content: center;
     justify-content: center;
+    padding: 0 50px;
 
 }
 
@@ -20,5 +28,7 @@
 }
 
 .section-caracteristique img{
+    width: 500px;
+    height: 300px;
 
 }

@@ -1,19 +1,22 @@
-*{
-    padding:0;
-    margin:0;
+* {
+    padding: 0;
+    margin: 0;
 }
 
 .header{
     position:fixed;
     width: 100%;
     border:solid 2px black;
-    background: aliceblue;
+    background: black;
+    z-index: 1;
 }
 
 .nav img{
     width: 300px;
     padding:0;
+
 }
+
 
 .nav{
     display: flex;
