@@ -1,0 +1,24 @@
+.container{
+    padding-top:55px;
+    margin:0 5em 0 5em;
+}
+
+.section-caracteristique{
+    display:flex;
+    align-items: center;
+    padding-bottom: 10em;
+}
+
+.section-caracteristique p{
+    align-content: center;
+    justify-content: center;
+
+}
+
+.flexRowReverse{
+    flex-direction: row-reverse;
+}
+
+.section-caracteristique img{
+
+}
