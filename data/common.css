@@ -1,0 +1,22 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+.header{
+    position:fixed;
+    width: 100%;
+    border:solid 2px black;
+}
+
+
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav a{
+    text-decoration: none;
+    font-size: 2em;
+}
