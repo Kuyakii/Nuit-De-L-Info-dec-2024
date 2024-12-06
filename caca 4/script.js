@@ -21,23 +21,23 @@ righttext.innerText = textPeau
     const scrollThresholdPeau = 0.8;
     const scrollThresholdPoumons = 1.0;
 
-        diapo.src = "img/peau"
+        diapo.src = "caca 4img/peau"
 
     if(scrollPercent>=scrollThresholdPoumons){
-        corpsImage.src ="img/corps-humain.webp"
+        corpsImage.src ="caca 4/img/corps-humain.webp"
         righttext.innerText = textPoumons
         corpsImage.style.transform =` translateY(450px) scale(${1+3*scrollPercent})`
-        diapo.src = "img/vegetaux.jpg"
+        diapo.src = "caca 4/img/vegetaux.jpg"
     }
     else if (scrollPercent >= scrollThresholdPeau) {
-        corpsImage.src ="img/corps-humain.webp"
+        corpsImage.src ="caca 4/img/corps-humain.webp"
         righttext.innerText = textSang
-        diapo.src = "img/river.jpg"
+        diapo.src = "caca 4/img/river.jpg"
     }
     else  {
-        corpsImage.src ="img/Corps-peau-humain.png"
+        corpsImage.src ="caca 4/img/Corps-peau-humain.png"
         righttext.innerText = textPeau
-        diapo.src = "img/ocean.jpg"
+        diapo.src = "caca 4/img/ocean.jpg"
     }
 });
 
