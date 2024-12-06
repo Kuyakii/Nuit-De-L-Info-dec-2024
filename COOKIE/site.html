@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taiko Clicker!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="title">Clique sur le tambour !</h1>
+  <div id="autoClickerContainer" class="auto-clicker-container"></div> <!-- Conteneur pour AutoClickers -->
+
+  <img src="https://static.vecteezy.com/system/resources/previews/009/384/696/non_2x/drum-clipart-design-illustration-free-png.png" alt="Clickable" id="clickableImage" class="taiko-drum">
+  <div id="counter" class="counter">0</div>
+  
+  <audio id="clickSound" src="UTILS/taiko-normal-hitclap.wav"></audio>
+  <audio id="buySound1" src="UTILS/discordping.mp3"></audio>
+  <audio id="buySound2" src="UTILS/discordping.mp3"></audio>
+  <audio id="buySound3" src="UTILS/discordping.mp3"></audio>
+  <audio id="buySound4" src="UTILS/discordping.mp3"></audio>
+  <audio id="buySound5" src="UTILS/discordping.mp3"></audio> 
+  <audio id="buySound6" src="UTILS/discordping.mp3"></audio>
+
+  <div id="draggableMenu" class="menu">
+    <span class="menuText">Menu Déroulant</span>
+    <ul id="itemList">
+      <li class="menuItem"><button onclick="buyItem(1, 1)">Acheter BoostClick (10 points)</button> <span id="itemCount1">0</span></li>
+      <li class="menuItem"><button onclick="buyItem(1, 2)">Acheter MoinsChiant (20 points)</button> <span id="itemCount2">0</span></li>
+      <li class="menuItem"><button onclick="buyItem(1, 3)">Acheter Champi (30 points)</button> <span id="itemCount3">0</span></li>
+      <li class="menuItem"><button onclick="buyItem(1, 4)">Acheter AutoClicker (40 points)</button> <span id="itemCount4">0</span></li>
+      <li class="menuItem"><button onclick="buyItem(1, 5)">Le meilleur Item (50 points)</button> <span id="itemCount5">0</span></li> 
+      <li class="menuItem"><button onclick="buyItem(2, 6)">Acheter Baguettes</button> <span id="itemCount6">0</span></li> 
+    </ul>
+  </div>
+
+  <script src="game.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>
