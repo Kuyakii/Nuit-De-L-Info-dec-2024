@@ -101,6 +101,31 @@ menu.addEventListener('mousedown', (e) => {
   }
 });
 
+// Code JavaScript pour afficher le pop-up de bienvenue
+window.onload = function() {
+  document.getElementById('welcomePopup').style.display = 'block';
+};
+
+function closePopup() {
+  document.getElementById('welcomePopup').style.display = 'none';
+}
+
+// Code JavaScript pour afficher/masquer la bulle d'info
+const infoButton = document.getElementById('infoButton');
+const infoBubble = document.getElementById('infoBubble');
+
+infoButton.addEventListener('click', () => {
+  if (infoBubble.style.display === 'none' || !infoBubble.style.display) {
+    infoBubble.style.display = 'block';
+  } else {
+    infoBubble.style.display = 'none';
+  }
+});
+
+
+
+
+
 document.addEventListener('mousemove', (e) => {
   if (isDragging) {
     // Commence à afficher les items seulement après avoir détecté un mouvement suffisant

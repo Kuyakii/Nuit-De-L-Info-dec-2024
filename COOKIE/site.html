@@ -7,8 +7,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Pop-up de bienvenue -->
+  <div id="welcomePopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2>Bienvenue sur Taiko Clicker !</h2>
+      <p>Nous avons dev pas mal de feature, revenez ici après avoir souffert !</p>
+      <textarea id="welcomeMessage" rows="4" cols="50">Menu Shop qui retombe, événement cassage de baguettes, événement confinement (plus possible d'ouvrir le shop), probabilité que le tambour rétrécisse à chaque clic</textarea>
+      <button onclick="closePopup()">Fermer</button>
+    </div>
+  </div>
+
   <h1 class="title">Clique sur le tambour !</h1>
-  <div id="autoClickerContainer" class="auto-clicker-container"></div> <!-- Conteneur pour AutoClickers -->
 
   <img src="https://static.vecteezy.com/system/resources/previews/009/384/696/non_2x/drum-clipart-design-illustration-free-png.png" alt="Clickable" id="clickableImage" class="taiko-drum">
   <div id="counter" class="counter">0</div>
@@ -18,20 +28,28 @@
   <audio id="buySound2" src="UTILS/discordping.mp3"></audio>
   <audio id="buySound3" src="UTILS/discordping.mp3"></audio>
   <audio id="buySound4" src="UTILS/discordping.mp3"></audio>
-  <audio id="buySound5" src="UTILS/discordping.mp3"></audio> 
-  <audio id="buySound6" src="UTILS/discordping.mp3"></audio>
+  <audio id="buySound5" src="UTILS/discordping.mp3"></audio>
+  <audio id="buySound6" src="UTILS/discordping.mp3"></audio> <!-- Nouveau son pour Baguettes -->
 
   <div id="draggableMenu" class="menu">
     <span class="menuText">Menu Déroulant</span>
     <ul id="itemList">
-      <li class="menuItem"><button onclick="buyItem(1, 1)">Acheter BoostClick (10 points)</button> <span id="itemCount1">0</span></li>
-      <li class="menuItem"><button onclick="buyItem(1, 2)">Acheter MoinsChiant (20 points)</button> <span id="itemCount2">0</span></li>
-      <li class="menuItem"><button onclick="buyItem(1, 3)">Acheter Champi (30 points)</button> <span id="itemCount3">0</span></li>
-      <li class="menuItem"><button onclick="buyItem(1, 4)">Acheter AutoClicker (40 points)</button> <span id="itemCount4">0</span></li>
-      <li class="menuItem"><button onclick="buyItem(1, 5)">Le meilleur Item (50 points)</button> <span id="itemCount5">0</span></li> 
-      <li class="menuItem"><button onclick="buyItem(2, 6)">Acheter Baguettes</button> <span id="itemCount6">0</span></li> 
+      <li class="menuItem"><button class="itemButton" title="BoostClick : Augmente le nombre de points par clic de 1." onclick="buyItem(10, 1)">Acheter BoostClick (10 points)</button> <span id="itemCount1">0</span></li>
+      <li class="menuItem"><button class="itemButton" title="MoinsChiant : Augmente le nombre de clics nécessaires pour afficher des messages irritants." onclick="buyItem(20, 2)">Acheter MoinsChiant (20 points)</button> <span id="itemCount2">0</span></li>
+      <li class="menuItem"><button class="itemButton" title="Champi : Augmente la taille du tambour." onclick="buyItem(30, 3)">Acheter Champi (30 points)</button> <span id="itemCount3">0</span></li>
+      <li class="menuItem"><button class="itemButton" title="AutoClicker : Ajoute un clic automatique chaque seconde." onclick="buyItem(40, 4)">Acheter AutoClicker (40 points)</button> <span id="itemCount4">0</span></li>
+      <li class="menuItem"><button class="itemButton" title="Resetter : Réinitialise le compteur à zéro." onclick="buyItem(50, 5)">Le meilleur Item (50 points)</button> <span id="itemCount5">0</span></li>
+      <li class="menuItem"><button class="itemButton" title="Baguettes : Rachète des baguettes pour pouvoir cliquer à nouveau." onclick="buyItem(2, 6)">Baguettes (2 points)</button> <span id="itemCount6">0</span></li>
     </ul>
+    
+    
   </div>
+
+  
+  
+
+  <button id="infoButton">Info</button> <!-- Bouton pour afficher la bulle d'info -->
+  <div id="infoBubble" class="info-bubble">Bienvenue dans le jeu Taiko Clicker ! Cliquez sur le tambour pour accumuler des points. Utilisez ces points pour acheter des items dans le menu.</div> <!-- Bulle d'info -->
 
   <script src="game.js"></script>
   <script src="menu.js"></script>
